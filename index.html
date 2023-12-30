@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>plain</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: white; /* Updated background color to white */
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #000; /* Set text color to black for better contrast */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            position: relative;
+            padding: 20px;
+        }
+
+        h1 {
+            color: black;
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        h2,
+        h4 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        input[type="url"] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 500px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #a800ff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #000;
+            transform: scale(1.05);
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        /* Responsive styles */
+        @media only screen and (max-width: 600px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            h2,
+            h4 {
+                font-size: 18px;
+            }
+
+            button {
+                font-size: 14px;
+            }
+        }
+
+        /* Additional styles for DuckDuckGo button */
+        #duckduckgo-button {
+            background-color: #ff6600;
+        }
+
+        #duckduckgo-button:hover {
+            background-color: #cc5200;
+        }
+
+        #duckduckgo-button:active {
+            transform: scale(0.95);
+        }
+
+        /* Spin effect for settings button on hover */
+        .settings-button:hover {
+            animation: spin 1s linear forwards;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Proxy Link Test</h1>
+        <h4>this is supposed to be a personal website not meant to be used by anyone</h4>
+        <input type="url" id="inputs-1" onkeydown="handleEnter(event)">
+      <h3>Links for testing</h3>
+      <h5>Shadow
+https://shadow.mathclasses.xyz/
+https://integralcalculus.materialeselectricos.com.ar/
+
+Tinfoil
+https://autismawareness.design/
+https://tutorials.tether-dev.com/
+
+Abyss
+https://panic.espacoextra.pt/
+https://api.adamnorbut.com/
+https://urine.espacoextra.pt/
+
+Rammerhead
+https://a.rare1k.space/
+https://rammerhead.im-a.pro/
+https://buyworksheets.suby.tk/
+https://99881122123098.30624770.tk/
+https://docs.google.com/document/d/1xAhU7wMo05gkSmk6ROjz0WYGqhboRk8VPC-B57v64vc/edit
+
+FlowOS
+https://maths4you.net/
+https://mymaths.academy/
+
+TIW
+https://uv-static.github.io/static/
+
+Terbium
+https://terbium.kxtz.dev/
+https://terbium-webos.pages.dev/
+
+Shuttle
+https://shut.scmt.store/
+https://studygeography.hop.sh/
+https://theatre-studylines.hop.sh/
+https://link.embedding.mov/
+https://shuttle.mom/
+https://search.uwuugle.com/
+
+Dm Unblocker
+https://unbl0cker.dmnetworkk.com/
+https://cool.tulanerw.org/
+https://free.unibutton.com/
+https://free.globalwireandcable.com/
+https://cool.blinklab.com/
+
+Art Class
+https://purchase-some.hotglue.click/
+https://wildcard.mathnotes.icu/
+</h5>
+    </div>
+
+    <script>
+
+        // Handle 'Enter' key press in the input field
+        function handleEnter(event) {
+            if (event.key === 'Enter') {
+                const element = document.getElementById('inputs-1');
+                let url = element.value.trim();
+
+                // Check if the URL starts with 'http://' or 'https://'
+                if (!url.startsWith('http://') && !url.startsWith('https://')) {
+                    // If not, prepend 'https://'
+                    url = 'https://' + url;
+                }
+
+                window.location.href = url;
+            }
+        }
+    </script>
+</body>
+
+</html>
